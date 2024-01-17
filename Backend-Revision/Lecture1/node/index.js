@@ -8,21 +8,20 @@
 
 // =>(local-machine) :-
 // 1 =  In our local machine we use (node.js) to (run) and (execute) the our-code on console.
-// 2 = And also in other hand with in the (node.js). It use the  (v8-engine) to run and execute that code on our local-machine (console) .and the (v8-engine) is also build on the (c++) language:
+// 2 = And also in other hand with in the (node.js). It use the  (v8-engine)or we can say (v8-runtime-engine) to run and execute that code on our local-machine (console) .and the (v8-engine) is also build on the (c++) language:
 
 // => (browser):-
 // 1 = same thing happen on the (browser) and browser-console as well.because the (chrome) browser also run on the (v8-engine):
 
 
-// 2 =  {Note-IMP} => who does we are able to access and run the javascript-code outside the (console) of (local-machione) and (browser):
+// 2 =  {Note-IMP} => who does we are able to access and run the javascript-code outside the (console) of (local-machine):
 
 // => (local-machine):
-// 1 = for that we need to create the (server).and under that (server).
-// we will write our javascipt code:
+// 1 = for that we need to create the (server).
 // we need to create the (server) acc to the language which we want to use in our (server):
-// so we want to use the (javascipt) language.To creating a server for the (javascipt) language.
-// we have to use its compatible (runtime-environment) through which we can create the server for it:
-// and that (runtime-environment) is (Node.js):
+// so we want to use the (javascipt) language.through which we will create a (server):
+// know we have to use the compatible (runtime-environment) acc to the (language) which we have choose:
+//  through which we are able to  create the (server) for it.And that (runtime-environment) is (Node.js):
 
 // => (browser):-
 // 1 = for having access on that (server-code) either that code is running on the (local-machine) or (cloud-machine):
