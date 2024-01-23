@@ -43,4 +43,41 @@
 // and with in those quotes.we will gave the (value) to that (jquery-function):
 // V.MP = And that jquery-function basically proivde that value to the html-element.acc to its interaction behaviour with the html-elements:
 
+// 1 => here we are changing the (html) value of (para1) html-element:
+
 $('#para1').html('hey harish');
+
+// working idea of  ($) function:through which we will access the (jquery):
+
+// function $(query){
+//     return document.querySelector(query);
+// }
+
+// 2 => if we want to hide the para1 html-element.then how we can do that with the help of jquery:
+$('#para1').hide();
+
+// IMP = there are several-function in jquery.through them we can manipulte our (html-elements):for example: html,text,width,etc:
+// 3 => if we wanna gave or set the (width) for the (para2):then we can do that with the help of (width) fucntion of the jquery:
+$('#para2').width(100);
+
+// V.V.IMP = we can pass the (one-objects) data to the (another-object):
+// and more importantly we can (manipulate) or (use) the (one-objects) data and (provide)  the (fucntions) and (methods) of the (another-objects) to it:
+// after passing that (one-objects) data to the (another-object):
+// it will become a part of (another-object).and then we can easily manipulate that data with its functions and methods:
+
+// for-example:if we have html-element in the (dom-object):
+// and we want to (manipulate) that element of (dom-object) with the help of jquery-object's (functions) and (methods):
+// so for doing that we can simply pass on the (dom-object) to the (jquery-object):
+// IMP = we can do that.by simply passing the (dom-object) to the ($) dollar-function.
+// In this way we can add the (dom-object) into the (jquery-object).and know on that we can use the (function) and (method) of (jquery-object) to manipulate the (dom-object):
+
+// => 1 =  here we have dom-object:
+var dom_obj=document.getElementById("para3");
+// => 2 = here we passing that dom-object to the jquery-object.with the help of ($) function:
+$(dom_obj);
+// now we can add all the (function) and (method) of the jquery-object on the dom-object to manipulate it:
+$(dom_obj).html('hello everyone');
+
+
+
+

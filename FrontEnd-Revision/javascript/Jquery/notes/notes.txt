@@ -8,3 +8,45 @@ Combinator selectors (select elements based on a specific relationship between t
 Pseudo-class selectors (select elements based on a certain state)
 Pseudo-elements selectors (select and style a part of an element)
 Attribute selectors (select elements based on an attribute or attribute value)
+
+=> difference  between the jquery object and dom object:
+
+The jQuery object and DOM (Document Object Model) object are related concepts in web development, but they have distinct differences.
+
+jQuery Object:
+
+Introduction: jQuery is a popular JavaScript library that simplifies the process of working with the DOM and handling events, animations, and AJAX requests.
+Creation: When you use jQuery to select elements from the DOM, it returns a jQuery object.
+javascript
+Copy code
+var myElement = $('#myId'); // jQuery object
+Methods: The jQuery object comes with its own set of methods and functions that you can use to manipulate the selected elements. These methods are designed to provide a simplified and consistent interface for various DOM operations.
+javascript
+Copy code
+myElement.hide();
+DOM Object:
+
+Introduction: The DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, text, etc.
+Creation: When you use native JavaScript to select elements from the DOM using methods like getElementById or querySelector, you get a DOM object.
+javascript
+Copy code
+var myElement = document.getElementById('myId'); // DOM object
+Methods: DOM objects have their own set of methods and properties, and these are typically more low-level compared to the jQuery methods. You may need to use different methods for similar operations when working directly with DOM objects.
+javascript
+Copy code
+myElement.style.display = 'none';
+Key Differences:
+
+Syntax:
+
+jQuery uses a concise and consistent syntax, often employing the $ function to create jQuery objects.
+DOM manipulation with native JavaScript involves using various methods and properties specific to the DOM API.
+Abstraction:
+
+jQuery abstracts away many cross-browser compatibility issues and provides a higher level of abstraction, making it easier to work with the DOM.
+Working directly with the DOM requires handling cross-browser differences and may involve more verbose code.
+Methods:
+
+jQuery methods are designed to be chainable and often allow for more concise code.
+DOM methods are generally more granular and might require more lines of code for equivalent operations.
+In summary, while both jQuery and the DOM deal with the manipulation of web documents, jQuery provides a higher-level abstraction with a simplified and consistent API, while working directly with the DOM involves using native JavaScript methods and dealing with more low-level details.
