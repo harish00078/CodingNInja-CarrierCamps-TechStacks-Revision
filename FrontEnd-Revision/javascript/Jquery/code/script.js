@@ -1,6 +1,6 @@
 // here we write the js for this html.page with the help of (Jquery):
 
-// V.IMP => 1 =  first how we can use the (jquery) to writing a (script) for the  (html-elements) in the javascript-file:
+// (V.IMP) => 1 =  first how we can use the (jquery) to writing a (script) for the  (html-elements) in the javascript-file:
 // 1 = first we see that how we can interact or write js for the html-page:In the simple js-format:
 // var para1 = document.getElementById('para1');
 // para1.innerHTML = 'welcome';
@@ -77,7 +77,7 @@ $(dom_obj);
 // now we can add all the (function) and (method) of the jquery-object on the dom-object to manipulate it:
 $(dom_obj).html("hello everyone");
 
-// V.IMP => 2 =  second how we can use the (jquery) to writing a (css) for the (html-elements) in the javasript-file:
+// (V.IMP) => 2 =  second how we can use the (jquery) to writing a (css) for the (html-elements) in the javasript-file:
 // first we need to (fetch) the (html) element in the javascript-file:with the help of (jquery):
 // for fetching the element with the help of jquery:we need to use the (&) dollar function:
 // then  we will use the dot (.) operator on the element:and after that we will use the (css) method of the (jquery):for providing the (css) to the (html) element:
@@ -101,7 +101,67 @@ $("#para3").css({ color: "cyan", fontSize: "30px" });
 $('div').css({
     width:'100px',
     height:'100px',
-    backgroundColor:"black",
+    backgroundColor:"cyan",
 
 
 })
+
+// (V.IMP) => 3 =  third we learn about that. how we can use the (jquery) for adding (events) on the  (html-elements) in the javasript-file:
+
+// IMP = for adding the events on the html-elements with the help of jquery:
+// 1 = first we need to fetch the (html-element) with the help of jquery:by using the (dollar)function:
+// 2 = second we can add the (event) on that element.with the help of (event) methods of (jquery):for example the (click) event-method:
+// through this event-method:we can handle the click on the (element).which  has been trigger by the (user):
+// 3 = for handling the (event) of the (element):
+// we need to create the (function):through which we gonna be handle the (event):
+
+// IMP => 1 =  this is the one-way to do it:by simple defining the (event-method):after the (.) dot of (html-element):
+
+// $('div').click(function(){
+    // for example. I want to show the alert on the (click) event of that particular element:
+    // for doing that we need to create the (alert) with in that (function):
+    // we can do that with the help of (alert)  method:
+//     alert('hey everyone.!!! how are you');
+
+
+// });
+
+// IMP => 2 =  this is the second-way to do it:
+// In this way:
+// 1 = first we use the (on) method after that (.) dot of (html-element):
+// 2 = and with  in that (on) method:
+// -> first we define the (event) method with in the (quotes).
+// -> second we define the (function) to handle that (event):we separate them both with the (,) comma:
+$('div').on('click',function(){
+    alert('hey everyone.!!! how are you',console.log('hey everyone'));
+
+});
+
+// IMP => (event-object) = we can also work on the (event-object):because when user trigger the event.
+// by using any of the (event-methods):like (click) event-method:we gets the (event-object):
+// for using that (event-object):we simple have to pass that (event) to the (function) as an (argument):through which we are handling the (event) of the particular element:
+// and after passing it to the (function). as a (argument):we can use that (event-object).under the (event) function and work on it:
+$('a').on('click',function(event){
+    event.preventDefault();
+    alert('Anchor tag clicked');
+});
+
+// IMP => (add-css) = how we can add or manipulate the (css) of the element.with in the (event) or (triggered-event) of the element:
+// for adding and manipulating the (css) of the (element).with in its (event):
+// 1 = for doing that first we need to (fetch) the (element). with in the (event-hanlder) function of element:
+// 2 = we can fetch the (element) with the help of jquery's (this) method:
+// (this) method of the jquery.will have the (element) with in it :
+// we can also to store tha (element).with in the (variable):so that we can work on it:
+// after getting the (element):with in the (event-handler) fucntion:
+// we can work on it:and provide the (css) properties to it:
+
+$('div').on('click',function(){
+    var element = $(this);
+    // 1 = we can gave the simple value to its (css) property:
+    // element.width(1000);
+    // 2 = or we can gave some (working) sequence (css) to the (element):
+    // acc to when (every) time this (event) get (trigger).we want to do some changes in the (css) properties of the particular (element):
+    // for-example:we want to change the width of the (element) by (10) px.when ever (user) click on this (element):
+    element.width(element.width() + 10 + 'px');
+    // alert('Anchor tag clicked');
+});
