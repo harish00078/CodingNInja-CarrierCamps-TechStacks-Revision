@@ -1,0 +1,12 @@
+=> The meaning of "XML" in "AJAX" can be a bit misleading. While AJAX stands for Asynchronous JavaScript and XML, while it was originally designed to use XML for data exchange, it's not actually limited to XML. In fact, nowadays, other formats like JSON are more commonly used.
+
+
+
+=> AJAX is a technique: It's not a programming language itself, but rather a combination of technologies working together to create smoother and more interactive web applications.
+=> JavaScript and XMLHttpRequest: These are the core components. JavaScript makes asynchronous requests using the XMLHttpRequest object to communicate with the server.
+=> XML was originally used: It offered a structured way to exchange data between web pages and servers.
+=> other formats are popular: JSON (JavaScript Object Notation) is often preferred due to its lighter weight and simpler syntax.
+
+=> IMP = So, while the "XML" in AJAX refers to its historical roots, it's important to know that AJAX can effectively function with various data formats, including JSON, plain text, and even custom formats specific to your application.
+
+i
