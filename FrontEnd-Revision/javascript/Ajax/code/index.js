@@ -1,4 +1,4 @@
-// => 1 = here we learn about that:how we can use the (ajax) in our applicaiton:with the help of (jquery):
+// => 1 = here we learn about that:how we can use the (ajax) in our applicaiton:without the help of jquery's (Ajax) methods:
 
 // 4 = here we have the function:
 // through which we gonna be made the (ajax) request to the (server):
