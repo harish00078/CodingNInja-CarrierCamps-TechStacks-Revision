@@ -38,6 +38,14 @@ function fetchRandomDogImage() {
     $("#dog-image").attr("src", imageUrl);
   };
 
+  // V.IMP => for handling the (errors) of (ajax-request):In the native-javascript:
+  // we use the (onerror) method:and same we need to pass the callback function to it:
+  // through which we gonna be hanlde the (error) related to (ajax) request:
+  xhrRequest.onerror = function(){
+    console.log("request failed");
+  };
+
+
   // 3 = third after  handling (onload) function of the (request).know we have to (initialize) this (request):
   // we can do that with the help of (open) method:
   // IMP = with in the (open) method.we need to define that multiple things.which are related to our (ajax) request):
@@ -126,13 +134,10 @@ function fetchRandomDogImage() {
   // and with in that (done) method.we define the (response) handler-function:
 
   $.get("https://dog.ceo/api/breeds/image/random").done(function (data) {
-
     console.log("another-method-to-send-ajaxrequest-using-jquery", data);
     var imageUrl = data.message;
     $("#dog-image").attr("src", imageUrl);
-
   });
-
 }
 
 // same things we need to do here as well:
@@ -140,3 +145,25 @@ function fetchRandomDogImage() {
 // 2 = and then add the event on that (element) with the help of jquery's event-methods:
 // 3 = we also need to proivde the (function) to that element's (event):through which we are baiscally handling that (event):
 $("#fetch-dog-image-button").click(fetchRandomDogImage);
+
+// V.V.IMP = how we can hanlde the errors:while we are making the (ajax) request:
+// for handling the errors in the (ajax) request:there are two ways to do it:
+// 1 = first is that we can use the (error) property:
+// 2 = second we can use the (fail()) method:
+// IMP = here we are learning about (fail()) method:
+// for hanlding errors of (ajax) request.through the (fail) method:
+// we need to use that (fail) method:in the (ajax) request.and with in that (fail) method.we will be creating a callback (funtion).through which we gonna be handle the (error) of (ajax) request:
+// IMP = the hanlder function:which we are passing to the (fail) method:
+// can recive the three things in it:
+// 1 = first is the (xhr):here (xhr) is the (jquery-XHR) object:
+// 2 = second is the (textStatus):it basically tell us about that there is any error or not:
+// 3 = third is the (errorThrown):it basically tell us about that what kind of (error) we are getting from the server:
+// V.IMP-Note: same way we can use the (fail) method with the (ajax) method as well:the way we use it with the (get) method directly:
+$.get("https://dog.ceo/api/breeds/image/random")
+  .done(function (data) {
+    var imageUrl = data.message;
+    $("#dog-image").attr("src", imageUrl);
+  })
+  .fail(function (xhr,textStatus,errorThrown) {
+    console.log("request failed");
+  });
